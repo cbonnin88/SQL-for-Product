@@ -4,6 +4,7 @@ Various projects using SQL (and dbt) for Product Analysis and Product Management
 
 ## TheLook Product Insights
 **Description:** A BigQuery SQL project that extracts and analyzes core e-commerce metrics to drive data-informed product management decisions.
+**Tools:** BigQuery, Google Cloud Platform
 
 **Key Implementations:**
 - **Data Source:** Queries Google's public thelook_ecommerce dataset, seamlessly joining user, event, and transactional tables without the need for manual data loading.
