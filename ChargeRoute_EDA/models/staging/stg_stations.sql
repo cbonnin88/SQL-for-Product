@@ -1,5 +1,5 @@
 WITH source AS (
-    SEELCT * FROM {{source('chargeroute_raw','stations')}}
+    SELECT * FROM {{source('chargeroute_raw','stations')}}
 )
 
 SELECT
