@@ -46,6 +46,7 @@ SELECT
     s.latitude AS station_latitude,
     s.longitude AS station_longitude,
     s.plug_count AS station_plug_count,
+    ce.is_successful,
     -- Analytical Flag
     CASE
         WHEN u.country = s.country THEN true
