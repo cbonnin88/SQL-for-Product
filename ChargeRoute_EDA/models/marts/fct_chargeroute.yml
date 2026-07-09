@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fct_charge_events
+    description: 'Denormalized core fact table at the charging event grain, optmized for Data Studio (Formerly Looker Studio) dashboards.'
+    columns:
+      - name: charge_event_id
+        description: 'Primary key of the charging event.'
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: 'Foreign key identifying the user who initiated the charge.'
+        tests:
+          - not_null
+      - name: is_successfull
+        description: 'Boolean flag representing whether the charging attempt succeeded.'
+      - name: is_domestic_charging
+        description: 'True if the user charged in their sign-up country, False if they charged internationally.'
+          

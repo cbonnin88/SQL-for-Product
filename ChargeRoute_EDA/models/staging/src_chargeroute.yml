@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: chargeroute_raw
+    database: product-analytics-494706
+    schema: raw_chargeroute
+    description: 'Raw data ingested from GCS buckets via FiveTran'
+    tables:
+      - name: users
+        description: 'Raw user profile and subscriptioin details'
+      - name: trips
+        description: 'Raw EV trip history details.'
+      - name: stations
+        description: 'Raw EV charging station geolocation and plug metadata.'
+      - name: charge_events
+        description: 'RAw telemtry logs for every charging attempt made by users.'

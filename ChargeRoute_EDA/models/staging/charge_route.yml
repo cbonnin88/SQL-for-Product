@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: "Cleaned and typed user profiles for ChargeRoute app."
+    columns:
+      - name: user_id
+        description: 'Unique identifier for each user.'
+        tests:
+          - unique
+          - not_null
+      - name: subscription_tier
+        description: 'The type of subscription plan the user signed up for.'
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['Free','Basic','Premium']
+
+  - name: stg_trips
+    description: 'Cleaned trip telemetry data logs.'
+    columns:
+      - name: trip_id
+        description: 'Unique identifier for each trip'
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: 'Foreign key referencing stg_users.user_id'
+        tests:
+          - not_null
+
+  - name: stg_stations
+    description: 'Metadata regarding physical charging station'
+    columns:
+      - name: station_id
+        description: 'Unique identifier for each charging station.'
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_charge_events
+    description: 'Telemetry logs of individual battery charging attempts.'
+    columns:
+      - name: charge_event_id
+        description: 'Unique identifier for each charging event.'
+        tests:
+          - unique
+          - not_null
+          
+          
+          
+          
+          
+          
+        
+          
