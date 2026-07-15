@@ -2,7 +2,7 @@
 
 Various projects using SQL (and dbt) for Product Analysis and Product Management
 
-## TheLook Product Insights
+## [TheLook Product Insights](https://github.com/cbonnin88/SQL-for-Product/tree/main/theLook_ecommerce_queries)
 **Description:** A BigQuery SQL project that extracts and analyzes core e-commerce metrics to drive data-informed product management decisions.
 
 **Tools:** BigQuery, Google Cloud Platform
